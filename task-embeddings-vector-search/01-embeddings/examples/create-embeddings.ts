@@ -3,24 +3,25 @@ export {};
 /**
  * create-embeddings.ts
  * ====================
- * Creates vector embeddings using the OpenAI API and compares their similarity.
+ * Creates vector embeddings using Ollama (local) and compares their similarity.
  *
- * Install:  npm install openai tsx
- * Run:      OPENAI_API_KEY="sk-..." npx tsx create-embeddings.ts
+ * Requires:  Ollama running locally with `nomic-embed-text` model
+ *            npm install ollama tsx
+ * Run:       npx tsx create-embeddings.ts
  */
 
-import OpenAI from "openai";
+import ollama from "ollama";
 
-const openai = new OpenAI(); // reads OPENAI_API_KEY from env
+const EMBED_MODEL = "nomic-embed-text";
 
 // --- Create an embedding for a piece of text ---
 async function createEmbedding(text: string): Promise<number[]> {
-  const response = await openai.embeddings.create({
-    model: "text-embedding-3-small",
+  const response = await ollama.embed({
+    model: EMBED_MODEL,
     input: text,
   });
 
-  const embedding = response.data[0].embedding;
+  const embedding = response.embeddings[0];
   console.log(`  Text:       "${text}"`);
   console.log(`  Dimensions: ${embedding.length}`);
   console.log(`  First 5:    [${embedding.slice(0, 5).map((v) => v.toFixed(4)).join(", ")}]`);
@@ -42,7 +43,7 @@ function cosineSimilarity(a: number[], b: number[]): number {
 // --- Main ---
 async function main() {
   console.log("=".repeat(60));
-  console.log("EMBEDDING CREATION DEMO");
+  console.log("EMBEDDING CREATION DEMO (Ollama — local)");
   console.log("=".repeat(60));
   console.log();
 

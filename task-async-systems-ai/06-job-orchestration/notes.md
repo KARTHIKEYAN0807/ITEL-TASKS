@@ -83,5 +83,70 @@ Compensate: Delete report  (undo Step 2)
 See [`examples/pipeline.ts`](./examples/pipeline.ts) — a sequential pipeline orchestrator (runs standalone, no AWS).
 
 ```bash
-npx tsx 06-job-orchestration/examples/pipeline.ts
+npx tsx 06-job-orchestration/examples/pipeline.ts 
+
+
+Output:
+
+
+PS D:\ITEL TASKS> cd task-async-systems-ai
+PS D:\ITEL TASKS\task-async-systems-ai> npx tsx 06-job-orchestration/examples/pipeline.ts
+============================================================
+JOB ORCHESTRATION — Sequential Pipeline Demo
+============================================================
+
+  Starting pipeline for document 'doc-001' ...
+
+  📄 Step 1: Extracting text from document ...
+     → Extracted 148 characters
+  ✂️  Step 2: Chunking text ...
+     → Created 4 chunks
+  🔢 Step 3: Generating embeddings ...
+     → Generated 4 embeddings (4D each)
+  💾 Step 4: Storing in vector database ...
+     → Stored 4 vectors
+  🔔 Step 5: Notifying user ...
+     → User notified: "Document 'doc-001' is ready for search!"
+
+  ✅ Pipeline completed in 4.83s
+
+  Final context: {
+  "documentId": "doc-001",
+  "documentUrl": "https://example.com/whitepaper.pdf",
+  "text": "This is the extracted text from the uploaded document. It contains important information about AI systems and their applications in modern software.",
+  "chunks": [
+    "This is the extracted text from the uploaded",
+    "document. It contains important information about",
+    "AI systems and their applications in modern",
+    "software."
+  ],
+  "embeddings": [
+    [
+      0.8214,
+      -0.1238,
+      0.4141,
+      -0.1007
+    ],
+    [
+      0.1227,
+      -0.4083,
+      -0.0655,
+      -0.0817
+    ],
+    [
+      0.4333,
+      -0.8269,
+      0.0536,
+      -0.868
+    ],
+    [
+      -0.4113,
+      0.4939,
+      -0.0321,
+      -0.9998
+    ]
+  ],
+  "storedCount": 4
+}
+PS D:\ITEL TASKS\task-async-systems-ai>
 ```

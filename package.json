@@ -14,6 +14,7 @@
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.700.0",
     "@pinecone-database/pinecone": "^4.0.0",
+    "ollama": "^0.6.3",
     "openai": "^4.70.0"
   },
   "devDependencies": {

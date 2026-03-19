@@ -77,5 +77,31 @@ From Pinecone docs:
 See [`examples/hybrid-search.ts`](./examples/hybrid-search.ts) — simulates hybrid search locally (**runs standalone, no API keys**).
 
 ```bash
-npx tsx 06-hybrid-search/examples/hybrid-search.ts
+npx tsx 06-hybrid-search/examples/hybrid-search.ts 
+
+Output:
+
+PS D:\ITEL TASKS> cd 'd:\ITEL TASKS\task-embeddings-vector-search'
+PS D:\ITEL TASKS\task-embeddings-vector-search> npx tsx 06-hybrid-search/examples/hybrid-search.ts
+============================================================
+HYBRID SEARCH DEMO (Dense + Sparse)
+============================================================
+
+--- DENSE (Semantic) ONLY ---
+  0.9995 | BERT Fine-tuning Guide
+  0.9993 | BERT Model Evaluation on SQuAD
+  0.9975 | Transformer Architecture for NLP
+
+--- SPARSE (Keyword) ONLY ---
+  0.3333 | BERT Model Evaluation on SQuAD
+  0.3333 | Transformer Architecture for NLP
+  0.3333 | GPT Performance Benchmarks
+
+--- HYBRID (50% Dense + 50% Sparse) ---
+  0.6664 (dense: 1.00, sparse: 0.33) | BERT Fine-tuning Guide
+  0.6663 (dense: 1.00, sparse: 0.33) | BERT Model Evaluation on SQuAD
+  0.6654 (dense: 1.00, sparse: 0.33) | Transformer Architecture for NLP
+
+✅ Hybrid search finds results that BOTH methods contribute to!
+PS D:\ITEL TASKS\task-embeddings-vector-search> 
 ```

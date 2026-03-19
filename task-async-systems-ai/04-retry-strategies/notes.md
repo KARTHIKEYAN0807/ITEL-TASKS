@@ -64,5 +64,23 @@ Means: "If a message fails 3 times, move it to the dead letter queue."
 See [`examples/retry-with-backoff.ts`](./examples/retry-with-backoff.ts) — runnable exponential backoff implementation (no AWS needed).
 
 ```bash
-npx tsx 04-retry-strategies/examples/retry-with-backoff.ts
+npx tsx 04-retry-strategies/examples/retry-with-backoff.ts 
+
+Output:
+
+
+PS D:\ITEL TASKS> cd task-async-systems-ai
+PS D:\ITEL TASKS\task-async-systems-ai> npx tsx 04-retry-strategies/examples/retry-with-backoff.ts
+============================================================
+EXPONENTIAL BACKOFF RETRY DEMO
+============================================================
+Simulating a flaky AI API that fails twice then succeeds:
+
+  ⚠️  Attempt 1 failed: 429 Too Many Requests (call #1) → retrying in 0.52s ...
+  ⚠️  Attempt 2 failed: 429 Too Many Requests (call #2) → retrying in 1.05s ...
+  ✅ AI API succeeded on attempt 3
+
+  Final result: "AI response generated successfully (call #3)"
+
+============================================================
 ```

@@ -74,5 +74,52 @@ See [`examples/sync-vs-async.ts`](./examples/sync-vs-async.ts) — runnable demo
 
 Run it:
 ```bash
-npx tsx 01-why-async-systems/examples/sync-vs-async.ts
+npx tsx 01-why-async-systems/examples/sync-vs-async.ts 
+
+Output:
+
+
+PS D:\ITEL TASKS> cd task-async-systems-ai\01-why-async-systems\examples                               
+PS D:\ITEL TASKS\task-async-systems-ai\01-why-async-systems\examples> npx tsx sync-vs-async.ts
+
+============================================================
+SYNCHRONOUS DEMO — blocking, one at a time
+============================================================
+  [AI] Processing task 'task-A' ...
+  [AI] Finished task 'task-A'
+  [AI] Processing task 'task-B' ...
+  [AI] Finished task 'task-B'
+  [AI] Processing task 'task-C' ...
+  [AI] Finished task 'task-C'
+
+  Total time (sync): 6.03s
+  Results: ["Result for 'task-A'","Result for 'task-B'","Result for 'task-C'"]
+
+============================================================
+ASYNCHRONOUS DEMO — non-blocking, queue + worker
+============================================================
+  [Producer] Task 'task-A' queued ✅  (instant)
+  [Producer] Task 'task-B' queued ✅  (instant)
+  [Producer] Task 'task-C' queued ✅  (instant)
+
+  Producer finished in 0.0000s ← user is FREE now!
+  [AI] Processing task 'task-A' ...
+  [AI] Processing task 'task-B' ...
+  [AI] Processing task 'task-C' ...
+  [AI] Finished task 'task-A'
+  [AI] Finished task 'task-B'
+  [AI] Finished task 'task-C'
+
+  Total worker time (async): 2.00s
+  Results: ["Result for 'task-A'","Result for 'task-B'","Result for 'task-C'"]
+
+============================================================
+COMPARISON
+============================================================
+  Sync  — user waited:  6.03s  (blocked the whole time)
+  Async — user waited:  0.0000s  (got ack instantly)
+  Async — total work:   2.00s  (done in background)
+
+  Key insight: In async, the user is freed almost instantly!
+PS D:\ITEL TASKS\task-async-systems-ai\01-why-async-systems\examples>
 ```

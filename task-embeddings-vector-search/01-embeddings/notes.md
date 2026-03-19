@@ -42,6 +42,7 @@ Input Text                    Embedding Model              Vector (Embedding)
 
 | Model | Provider | Dimensions | Best For |
 |-------|----------|------------|----------|
+| `nomic-embed-text` | Ollama (local) | 768 | General text, free, runs locally |
 | `text-embedding-3-small` | OpenAI | 1536 | General text, cost-effective |
 | `text-embedding-3-large` | OpenAI | 3072 | Highest accuracy |
 | `all-MiniLM-L6-v2` | Sentence Transformers | 384 | Fast, lightweight, open-source |
@@ -83,9 +84,46 @@ Original Document (5000 words)
 
 ## Code Example
 
-See [`examples/create-embeddings.ts`](./examples/create-embeddings.ts) — creates embeddings using the OpenAI API.
+See [`examples/create-embeddings.ts`](./examples/create-embeddings.ts) — creates embeddings using Ollama locally (no API key needed).
 
+Requires Ollama running with `nomic-embed-text` model:
 ```bash
-export OPENAI_API_KEY="sk-..."
+ollama pull nomic-embed-text
 npx tsx 01-embeddings/examples/create-embeddings.ts
 ```
+Output:
+
+PS D:\ITEL TASKS> cd 'd:\ITEL TASKS\task-embeddings-vector-search'   
+PS D:\ITEL TASKS\task-embeddings-vector-search> npx tsx 01-embeddings/examples/create-embeddings.ts
+============================================================
+EMBEDDING CREATION DEMO (Ollama — local)
+============================================================
+
+  Text:       "Machine learning is a subset of artificial intelligence"
+  Dimensions: 768
+  First 5:    [0.0092, 0.0649, -0.1551, -0.0130, 0.0689]
+
+  Text:       "Deep learning uses neural networks with many layers"
+  Dimensions: 768
+  First 5:    [-0.0018, 0.0571, -0.1670, 0.0148, 0.0590]
+
+  Text:       "I went to the grocery store to buy milk"
+  Dimensions: 768
+  First 5:    [-0.0329, 0.0564, -0.1581, 0.0275, 0.0136]
+
+============================================================
+SIMILARITY COMPARISON
+============================================================
+  "Machine learning is a subset of art..." vs
+  "Deep learning uses neural networks ..."
+  → Similarity: 0.7588
+
+  "Machine learning is a subset of art..." vs
+  "I went to the grocery store to buy ..."
+  → Similarity: 0.4173
+
+  "Deep learning uses neural networks ..." vs
+  "I went to the grocery store to buy ..."
+  → Similarity: 0.4170
+
+PS D:\ITEL TASKS\task-embeddings-vector-search> 

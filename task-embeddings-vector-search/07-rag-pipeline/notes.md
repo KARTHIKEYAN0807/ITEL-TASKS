@@ -92,5 +92,56 @@ Agentic RAG:
 See [`examples/rag-query.ts`](./examples/rag-query.ts) — full RAG pipeline (embed → search → augment → generate).
 
 ```bash
-PINECONE_API_KEY="..." OPENAI_API_KEY="sk-..." npx tsx rag-query.ts
+PINECONE_API_KEY="..." OPENAI_API_KEY="sk-..." npx tsx rag-query.ts 
+
+
+Output:
+
+PS D:\ITEL TASKS> cd task-embeddings-vector-search
+PS D:\ITEL TASKS\task-embeddings-vector-search> npx tsx 07-rag-pipeline/examples/rag-query.ts
+============================================================
+RAG PIPELINE DEMO (Ollama — fully local)
+============================================================
+
+  📥 Indexing 5 knowledge base documents ...
+
+    ✅ "Refund Policy"
+    ✅ "Shipping Information"
+    ✅ "Product Warranty"
+    ✅ "Contact Support"
+    ✅ "Return Process"
+
+============================================================
+RAG QUERIES
+============================================================
+
+  ❓ Question: "What is the company's refund policy?"
+
+  Step 1: Embedding query ...
+  Step 2: Searching vector store ...
+  Found 3 relevant documents:
+
+    - Refund Policy (score: 0.7071)
+    - Return Process (score: 0.5569)
+    - Contact Support (score: 0.5139)
+
+  Step 3-4: Augmenting prompt & generating answer ...
+
+  ──────────────────────────────────────────────────
+  📝 Answer:
+
+  Based on the provided context, I can answer that the company's refund policy is as follows:
+
+The company offers a full refund within 30 days of purchase.
+
+This is stated explicitly in the context: "Our company offers a full refund within 30 days of purchase."
+
+Additionally, after 30 days, a 50% store credit is issued for digital products. This information can be found in the context under "After 30 days, a 50% store credit is issued."
+
+  ──────────────────────────────────────────────────
+  Sources:
+    • Refund Policy (relevance: 0.7071)
+    • Return Process (relevance: 0.5569)
+    • Contact Support (relevance: 0.5139)
+PS D:\ITEL TASKS\task-embeddings-vector-search> 
 ```
