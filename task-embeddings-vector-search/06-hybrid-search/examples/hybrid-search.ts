@@ -1,3 +1,5 @@
+export {};
+
 /**
  * hybrid-search.ts
  * ================
@@ -10,7 +12,7 @@
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
-interface Document {
+interface DocEntry {
   id: string;
   title: string;
   text: string;
@@ -52,7 +54,7 @@ function sparseScore(queryKeywords: string[], docKeywords: string[]): number {
 // ---------------------------------------------------------------------------
 // Sample document corpus
 // ---------------------------------------------------------------------------
-const documents: Document[] = [
+const documents: DocEntry[] = [
   {
     id: "doc-1",
     title: "BERT Model Evaluation on SQuAD",

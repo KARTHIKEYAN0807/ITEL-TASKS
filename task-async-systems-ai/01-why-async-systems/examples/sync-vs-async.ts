@@ -1,3 +1,5 @@
+export {};
+
 /**
  * sync-vs-async.ts
  * ================

@@ -1,3 +1,5 @@
+export {};
+
 /**
  * cosine-similarity.ts
  * ====================
