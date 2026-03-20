@@ -9,7 +9,10 @@
     "pipeline-demo": "npx tsx task-async-systems-ai/06-job-orchestration/examples/pipeline.ts",
     "rate-limit-demo": "npx tsx task-async-systems-ai/07-rate-limiting/examples/token-bucket.ts",
     "cosine-demo": "npx tsx task-embeddings-vector-search/03-cosine-similarity/examples/cosine-similarity.ts",
-    "hybrid-demo": "npx tsx task-embeddings-vector-search/06-hybrid-search/examples/hybrid-search.ts"
+    "hybrid-demo": "npx tsx task-embeddings-vector-search/06-hybrid-search/examples/hybrid-search.ts",
+    "rag-demo": "npx tsx task-rag-systems/01-retrieval-augmented-generation/examples/rag-basics.ts",
+    "chunking-demo": "npx tsx task-rag-systems/02-document-chunking/examples/chunking-strategies.ts",
+    "reranker-demo": "npx tsx task-rag-systems/06-reranking/examples/reranker.ts"
   },
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.700.0",

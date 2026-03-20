@@ -1,6 +1,6 @@
 # ITEL Tasks
 
-> A hands-on study repository covering **Async Systems in AI** and **Embeddings & Vector Search** — complete with concept notes, TypeScript code examples, and runnable demos.
+> A hands-on study repository covering **Async Systems in AI**, **Embeddings & Vector Search**, and **RAG Systems** — complete with concept notes, TypeScript code examples, and runnable demos.
 
 ---
 
@@ -21,15 +21,23 @@ ITEL TASKS/
 │   ├── 06-job-orchestration/
 │   ├── 07-rate-limiting/
 │   └── 08-aws-sqs-overview/
-└── task-embeddings-vector-search/         ← Task 2: Embeddings & Vector Search
+├── task-embeddings-vector-search/         ← Task 2: Embeddings & Vector Search
+│   ├── README.md
+│   ├── 01-embeddings/
+│   ├── 02-vector-similarity-search/
+│   ├── 03-cosine-similarity/
+│   ├── 04-vector-indexing/
+│   ├── 05-metadata-filtering/
+│   ├── 06-hybrid-search/
+│   └── 07-rag-pipeline/
+└── task-rag-systems/                      ← Task 3: RAG Systems
     ├── README.md
-    ├── 01-embeddings/
-    ├── 02-vector-similarity-search/
-    ├── 03-cosine-similarity/
-    ├── 04-vector-indexing/
-    ├── 05-metadata-filtering/
-    ├── 06-hybrid-search/
-    └── 07-rag-pipeline/
+    ├── 01-retrieval-augmented-generation/
+    ├── 02-document-chunking/
+    ├── 03-ingestion-pipelines/
+    ├── 04-context-injection/
+    ├── 05-hallucination-mitigation/
+    └── 06-reranking/
 ```
 
 Each sub-folder contains a `notes.md` (concept explanation) and an `examples/` directory with runnable TypeScript demos.
@@ -75,6 +83,23 @@ Covers text embeddings, similarity search, and building RAG pipelines with Pinec
 
 ---
 
+### Task 3 — RAG Systems
+
+Covers retrieval-augmented generation end-to-end: chunking, ingestion, context injection, hallucination mitigation, and reranking.
+
+| # | Topic | Description |
+|---|-------|-------------|
+| 1 | Retrieval-Augmented Generation | Full RAG architecture and pipeline |
+| 2 | Document Chunking | Strategies for splitting documents into retrieval-friendly pieces |
+| 3 | Ingestion Pipelines | Load → clean → chunk → embed → store workflow |
+| 4 | Context Injection | Prompt augmentation patterns (stuffing, map-reduce, refine) |
+| 5 | Hallucination Mitigation | Grounding, citation enforcement, confidence scoring |
+| 6 | Reranking | Cross-encoder reranking and reciprocal rank fusion |
+
+👉 [Full details → task-rag-systems/README.md](./task-rag-systems/README.md)
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -102,6 +127,11 @@ npm run rate-limit-demo      # Token-bucket rate limiter
 # Task 2 — Embeddings & Vector Search
 npm run cosine-demo          # Cosine similarity calculation
 npm run hybrid-demo          # Hybrid search (dense + sparse)
+
+# Task 3 — RAG Systems
+npm run rag-demo             # Full RAG pipeline (Ollama)
+npm run chunking-demo        # Document chunking strategies
+npm run reranker-demo        # Reranking & RRF fusion
 ```
 
 Or run any example directly:
@@ -121,8 +151,9 @@ npx tsx <path-to-example>.ts
 | **AWS SQS** | Producer/Consumer, DLQ, SQS overview demos | Run `aws configure` with valid credentials |
 | **OpenAI API** | Embedding generation, RAG pipeline | Set `OPENAI_API_KEY` env var |
 | **Pinecone** | Vector search, metadata filtering, RAG | Set `PINECONE_API_KEY` env var |
+| **Ollama** | RAG demos, ingestion, context injection | Install Ollama + pull `nomic-embed-text`, `llama3.2:1b` |
 
-Standalone demos that need **no external services**: `sync-vs-async.ts`, `retry-with-backoff.ts`, `token-bucket.ts`, `cosine-similarity.ts`, `hybrid-search.ts`.
+Standalone demos that need **no external services**: `sync-vs-async.ts`, `retry-with-backoff.ts`, `token-bucket.ts`, `cosine-similarity.ts`, `hybrid-search.ts`, `chunking-strategies.ts`, `hallucination-guard.ts`, `reranker.ts`.
 
 ---
 
@@ -158,6 +189,13 @@ Standalone demos that need **no external services**: `sync-vs-async.ts`, `retry-
 - [Pinecone — Sparse Retrieval](https://www.pinecone.io/learn/sparse-retrieval/)
 - [Pinecone — Reranking](https://www.pinecone.io/learn/refine-with-rerank/)
 - [Pinecone TypeScript SDK](https://docs.pinecone.io/reference/typescript-sdk)
+
+### RAG Systems
+
+- [DeepLearning.AI — RAG Course](https://www.deeplearning.ai/courses/retrieval-augmented-generation-rag/)
+- [Pinecone — Retrieval-Augmented Generation](https://www.pinecone.io/learn/retrieval-augmented-generation/)
+- [Pinecone — Chunking Strategies](https://www.pinecone.io/learn/chunking-strategies/)
+- [Cohere — Rerank API](https://docs.cohere.com/docs/rerank-2)
 - [OpenAI Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
 
 ---
