@@ -12,6 +12,9 @@
     "hybrid-demo": "npx tsx task-embeddings-vector-search/06-hybrid-search/examples/hybrid-search.ts",
     "rag-demo": "npx tsx task-rag-systems/01-retrieval-augmented-generation/examples/rag-basics.ts",
     "chunking-demo": "npx tsx task-rag-systems/02-document-chunking/examples/chunking-strategies.ts",
+    "ingestion-demo": "npx tsx task-rag-systems/03-ingestion-pipelines/examples/ingestion-pipeline.ts",
+    "injection-demo": "npx tsx task-rag-systems/04-context-injection/examples/context-injection.ts",
+    "hallucination-demo": "npx tsx task-rag-systems/05-hallucination-mitigation/examples/hallucination-guard.ts",
     "reranker-demo": "npx tsx task-rag-systems/06-reranking/examples/reranker.ts"
   },
   "dependencies": {

@@ -131,6 +131,9 @@ npm run hybrid-demo          # Hybrid search (dense + sparse)
 # Task 3 — RAG Systems
 npm run rag-demo             # Full RAG pipeline (Ollama)
 npm run chunking-demo        # Document chunking strategies
+npm run ingestion-demo       # Multi-document ingestion pipeline
+npm run injection-demo       # Context injection strategies
+npm run hallucination-demo   # Grounding and hallucination checks
 npm run reranker-demo        # Reranking & RRF fusion
 ```
 
