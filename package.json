@@ -15,11 +15,20 @@
     "ingestion-demo": "npx tsx task-rag-systems/03-ingestion-pipelines/examples/ingestion-pipeline.ts",
     "injection-demo": "npx tsx task-rag-systems/04-context-injection/examples/context-injection.ts",
     "hallucination-demo": "npx tsx task-rag-systems/05-hallucination-mitigation/examples/hallucination-guard.ts",
-    "reranker-demo": "npx tsx task-rag-systems/06-reranking/examples/reranker.ts"
+    "reranker-demo": "npx tsx task-rag-systems/06-reranking/examples/reranker.ts",
+    "prompt-tracing-demo": "npx tsx task-sentry-ai-observability/01-prompt-tracing/examples/prompt-tracing.ts",
+    "token-usage-demo": "npx tsx task-sentry-ai-observability/02-token-usage-tracking/examples/token-usage.ts",
+    "latency-demo": "npx tsx task-sentry-ai-observability/03-latency-monitoring/examples/latency-monitor.ts",
+    "debug-prompts-demo": "npx tsx task-sentry-ai-observability/04-debugging-prompts/examples/debug-prompts.ts",
+    "cost-monitor-demo": "npx tsx task-sentry-ai-observability/05-cost-monitoring/examples/cost-monitor.ts"
   },
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.700.0",
     "@pinecone-database/pinecone": "^4.0.0",
+    "@sentry/nextjs": "^10.45.0",
+    "@sentry/node": "^9.47.1",
+    "dotenv": "^16.6.1",
+    "langfuse": "^3.38.6",
     "ollama": "^0.6.3",
     "openai": "^4.70.0"
   },
