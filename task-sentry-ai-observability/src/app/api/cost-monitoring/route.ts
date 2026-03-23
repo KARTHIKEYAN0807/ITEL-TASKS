@@ -18,7 +18,7 @@ const ollama = new OpenAI({
   apiKey: "ollama",
 });
 
-const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2";
+const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2:1b";
 
 // ── Equivalent OpenAI pricing (USD per 1 M tokens) for reference ────────────
 // Ollama itself is free, but we show what these calls would cost on OpenAI
@@ -26,7 +26,7 @@ const EQUIVALENT_PRICING: Record<string, { inputPerM: number; outputPerM: number
   "gpt-4o":      { inputPerM: 2.50,  outputPerM: 10.00 },
   "gpt-4o-mini": { inputPerM: 0.15,  outputPerM: 0.60  },
 };
-// Ollama / llama3.2 equivalent — use gpt-4o-mini pricing as reference
+// Ollama / llama3.2:1b equivalent — use gpt-4o-mini pricing as reference
 const OLLAMA_EQUIV = "gpt-4o-mini";
 
 function calcEquivalentCostUSD(inputTokens: number, outputTokens: number): number {

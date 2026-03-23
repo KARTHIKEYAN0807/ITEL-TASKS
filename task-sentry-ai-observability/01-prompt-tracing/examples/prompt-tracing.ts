@@ -5,7 +5,7 @@
  * Spans appear in: Sentry → Performance → Traces → Waterfall view
  *
  * Run: npx tsx task-sentry-ai-observability/01-prompt-tracing/examples/prompt-tracing.ts
- * Requires: ollama serve + ollama pull llama3.2
+ * Requires: ollama serve + ollama pull llama3.2:1b
  */
 
 import * as Sentry from "@sentry/node";
@@ -31,7 +31,7 @@ const ollama = new OpenAI({
   baseURL: process.env.OLLAMA_BASE_URL ?? "http://localhost:11434/v1",
   apiKey: "ollama",
 });
-const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2";
+const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2:1b";
 
 // ── Main demo ─────────────────────────────────────────────────────────────────
 

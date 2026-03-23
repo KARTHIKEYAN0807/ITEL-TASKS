@@ -16,7 +16,7 @@ const ollama = new OpenAI({
   apiKey: "ollama", // Ollama doesn't need a real key
 });
 
-const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2";
+const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2:1b";
 
 export async function GET() {
   const result = await Sentry.startSpan(

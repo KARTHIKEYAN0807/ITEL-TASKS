@@ -6,7 +6,7 @@
  * View in: Sentry → Insights → AI → Costs
  *
  * Run: npx tsx task-sentry-ai-observability/05-cost-monitoring/examples/cost-monitor.ts
- * Requires: ollama serve + ollama pull llama3.2
+ * Requires: ollama serve + ollama pull llama3.2:1b
  */
 
 import * as Sentry from "@sentry/node";
@@ -32,7 +32,7 @@ const ollama = new OpenAI({
   baseURL: process.env.OLLAMA_BASE_URL ?? "http://localhost:11434/v1",
   apiKey: "ollama",
 });
-const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2";
+const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2:1b";
 
 // ── Equivalent OpenAI pricing for reference (USD per 1M tokens) ───────────────
 // Ollama is free, but we show what these calls would cost equivalent to gpt-4o-mini

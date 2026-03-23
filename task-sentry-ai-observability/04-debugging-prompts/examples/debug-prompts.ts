@@ -9,7 +9,7 @@
  *  - Sentry → Performance → Traces → debug-prompts-session
  *
  * Run: npx tsx task-sentry-ai-observability/04-debugging-prompts/examples/debug-prompts.ts
- * Requires: ollama serve + ollama pull llama3.2
+ * Requires: ollama serve + ollama pull llama3.2:1b
  */
 
 import * as Sentry from "@sentry/node";
@@ -35,7 +35,7 @@ const ollama = new OpenAI({
   baseURL: process.env.OLLAMA_BASE_URL ?? "http://localhost:11434/v1",
   apiKey: "ollama",
 });
-const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2";
+const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2:1b";
 
 type ChatMessage = OpenAI.Chat.ChatCompletionMessageParam;
 

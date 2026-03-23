@@ -17,7 +17,7 @@ const ollama = new OpenAI({
   apiKey: "ollama",
 });
 
-const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2";
+const MODEL = process.env.OLLAMA_MODEL ?? "llama3.2:1b";
 
 // Different tasks with different latency expectations
 const aiCalls = [
