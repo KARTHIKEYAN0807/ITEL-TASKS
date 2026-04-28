@@ -27,6 +27,7 @@ import { NextResponse } from "next/server";
 import OpenAI from "openai";
 import { createSampleGraph } from "@/lib/knowledge-graph";
 import { loadGraph } from "@/lib/kg-persistence";
+import { loadMemories } from "@/lib/memory-persistence";
 import { ContextEngineer } from "@/lib/context-engineer";
 
 const ollama = new OpenAI({
@@ -383,24 +384,25 @@ export async function POST(request: Request) {
   const userQuestion: string =
     body.question ??
     "What technologies are used by products that Google created?";
+  // Short-term memory: conversation history from the frontend
+  const conversationHistory: Array<{ role: string; content: string }> =
+    body.conversationHistory ?? [];
 
   const conversationId = `conv-ctx-eng-${Date.now()}`;
 
   const kg = loadGraph();
   const engineer = new ContextEngineer(kg);
 
-  engineer.addMemory({
-    key: "preferred_detail_level",
-    value: "detailed with examples",
-    source: "user",
-    createdAt: Date.now() - 86400000,
-  });
-  engineer.addMemory({
-    key: "known_background",
-    value: "User is an AI engineering student",
-    source: "inferred",
-    createdAt: Date.now() - 3600000,
-  });
+  // Load REAL long-term memory from disk
+  const longTermMemories = loadMemories();
+  for (const mem of longTermMemories) {
+    engineer.addMemory({
+      key: mem.key,
+      value: mem.value,
+      source: mem.source,
+      createdAt: mem.createdAt,
+    });
+  }
 
   const pipelineResult: Record<string, unknown> = {};
   const toolCallLog: Array<{
@@ -617,6 +619,12 @@ export async function POST(request: Request) {
               role: "system",
               content: `Retrieved Context from Knowledge Graph:\n\n${retrievedFacts.join("\n\n")}`,
             },
+            // Short-term memory: previous conversation turns
+            ...conversationHistory.map((msg) => ({
+              role: msg.role as "user" | "assistant",
+              content: msg.content,
+            })),
+            // Current question
             { role: "user", content: userQuestion },
           ];
 
