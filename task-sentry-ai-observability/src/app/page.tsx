@@ -50,6 +50,15 @@ export default function HomePage() {
       description:
         "Calculates per-call USD cost from token counts and attaches it to Sentry spans for cost aggregation.",
     },
+    {
+      topic: "06",
+      title: "Context Engineering + Knowledge Graph",
+      href: "/context-graph-ui",
+      badge: "Performance → Traces + AI → Conversations",
+      icon: "🧠",
+      description:
+        "Full Context Engineering pipeline: instruction, task, retrieved, tool, memory, output & safety context — backed by an in-memory Knowledge Graph with entities, relationships, multi-hop traversal, and inference. All traced with Sentry.",
+    },
   ];
 
   return (

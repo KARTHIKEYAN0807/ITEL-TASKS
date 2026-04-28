@@ -1,0 +1,585 @@
+{
+  "entities": [
+    {
+      "id": "satya_nadella",
+      "type": "Person",
+      "labels": [
+        "CEO",
+        "Engineer"
+      ],
+      "properties": {
+        "name": "Satya Nadella",
+        "born": 1967,
+        "nationality": "Indian-American"
+      }
+    },
+    {
+      "id": "sundar_pichai",
+      "type": "Person",
+      "labels": [
+        "CEO",
+        "Engineer"
+      ],
+      "properties": {
+        "name": "Sundar Pichai",
+        "born": 1972,
+        "nationality": "Indian-American"
+      }
+    },
+    {
+      "id": "sam_altman",
+      "type": "Person",
+      "labels": [
+        "CEO",
+        "Entrepreneur"
+      ],
+      "properties": {
+        "name": "Sam Altman",
+        "born": 1985,
+        "nationality": "American"
+      }
+    },
+    {
+      "id": "jensen_huang",
+      "type": "Person",
+      "labels": [
+        "CEO",
+        "Engineer"
+      ],
+      "properties": {
+        "name": "Jensen Huang",
+        "born": 1963,
+        "nationality": "Taiwanese-American"
+      }
+    },
+    {
+      "id": "demis_hassabis",
+      "type": "Person",
+      "labels": [
+        "CEO",
+        "Researcher"
+      ],
+      "properties": {
+        "name": "Demis Hassabis",
+        "born": 1976,
+        "nationality": "British"
+      }
+    },
+    {
+      "id": "ilya_sutskever",
+      "type": "Person",
+      "labels": [
+        "Researcher",
+        "Co-founder"
+      ],
+      "properties": {
+        "name": "Ilya Sutskever",
+        "born": 1986,
+        "nationality": "Israeli-Canadian"
+      }
+    },
+    {
+      "id": "microsoft",
+      "type": "Company",
+      "labels": [
+        "Tech",
+        "Cloud"
+      ],
+      "properties": {
+        "name": "Microsoft",
+        "founded": 1975,
+        "employees": 221000
+      }
+    },
+    {
+      "id": "google",
+      "type": "Company",
+      "labels": [
+        "Tech",
+        "AI"
+      ],
+      "properties": {
+        "name": "Google",
+        "founded": 1998,
+        "employees": 182502
+      }
+    },
+    {
+      "id": "openai",
+      "type": "Company",
+      "labels": [
+        "AI",
+        "Research"
+      ],
+      "properties": {
+        "name": "OpenAI",
+        "founded": 2015,
+        "employees": 1500
+      }
+    },
+    {
+      "id": "nvidia",
+      "type": "Company",
+      "labels": [
+        "Tech",
+        "Hardware"
+      ],
+      "properties": {
+        "name": "NVIDIA",
+        "founded": 1993,
+        "employees": 29600
+      }
+    },
+    {
+      "id": "deepmind",
+      "type": "Company",
+      "labels": [
+        "AI",
+        "Research"
+      ],
+      "properties": {
+        "name": "DeepMind",
+        "founded": 2010,
+        "employees": 2500
+      }
+    },
+    {
+      "id": "ssi",
+      "type": "Company",
+      "labels": [
+        "AI",
+        "Safety"
+      ],
+      "properties": {
+        "name": "Safe Superintelligence Inc.",
+        "founded": 2024,
+        "employees": 30
+      }
+    },
+    {
+      "id": "gpt4",
+      "type": "Product",
+      "labels": [
+        "LLM",
+        "AI Model"
+      ],
+      "properties": {
+        "name": "GPT-4",
+        "released": 2023,
+        "type": "Large Language Model"
+      }
+    },
+    {
+      "id": "gemini",
+      "type": "Product",
+      "labels": [
+        "LLM",
+        "AI Model"
+      ],
+      "properties": {
+        "name": "Gemini",
+        "released": 2023,
+        "type": "Multimodal AI Model"
+      }
+    },
+    {
+      "id": "copilot",
+      "type": "Product",
+      "labels": [
+        "AI Tool",
+        "IDE"
+      ],
+      "properties": {
+        "name": "GitHub Copilot",
+        "released": 2021,
+        "type": "AI Coding Assistant"
+      }
+    },
+    {
+      "id": "cuda",
+      "type": "Product",
+      "labels": [
+        "Platform",
+        "GPU"
+      ],
+      "properties": {
+        "name": "CUDA",
+        "released": 2007,
+        "type": "GPU Computing Platform"
+      }
+    },
+    {
+      "id": "alphafold",
+      "type": "Product",
+      "labels": [
+        "AI Model",
+        "Science"
+      ],
+      "properties": {
+        "name": "AlphaFold",
+        "released": 2020,
+        "type": "Protein Structure Prediction"
+      }
+    },
+    {
+      "id": "azure",
+      "type": "Product",
+      "labels": [
+        "Cloud",
+        "Platform"
+      ],
+      "properties": {
+        "name": "Azure",
+        "released": 2010,
+        "type": "Cloud Computing Platform"
+      }
+    },
+    {
+      "id": "transformer",
+      "type": "Technology",
+      "labels": [
+        "Architecture"
+      ],
+      "properties": {
+        "name": "Transformer",
+        "year": 2017,
+        "paper": "Attention Is All You Need"
+      }
+    },
+    {
+      "id": "rlhf",
+      "type": "Technology",
+      "labels": [
+        "Training"
+      ],
+      "properties": {
+        "name": "RLHF",
+        "year": 2017,
+        "paper": "Deep RL from Human Preferences"
+      }
+    },
+    {
+      "id": "rag",
+      "type": "Technology",
+      "labels": [
+        "Architecture"
+      ],
+      "properties": {
+        "name": "RAG",
+        "year": 2020,
+        "paper": "Retrieval-Augmented Generation"
+      }
+    },
+    {
+      "id": "context_eng",
+      "type": "Technology",
+      "labels": [
+        "Methodology"
+      ],
+      "properties": {
+        "name": "Context Engineering",
+        "year": 2024,
+        "description": "Designing the full information environment for AI models"
+      }
+    },
+    {
+      "id": "redmond",
+      "type": "Location",
+      "labels": [
+        "City",
+        "HQ"
+      ],
+      "properties": {
+        "name": "Redmond, WA",
+        "country": "USA"
+      }
+    },
+    {
+      "id": "mountain_view",
+      "type": "Location",
+      "labels": [
+        "City",
+        "HQ"
+      ],
+      "properties": {
+        "name": "Mountain View, CA",
+        "country": "USA"
+      }
+    },
+    {
+      "id": "san_francisco",
+      "type": "Location",
+      "labels": [
+        "City",
+        "HQ"
+      ],
+      "properties": {
+        "name": "San Francisco, CA",
+        "country": "USA"
+      }
+    },
+    {
+      "id": "santa_clara",
+      "type": "Location",
+      "labels": [
+        "City",
+        "HQ"
+      ],
+      "properties": {
+        "name": "Santa Clara, CA",
+        "country": "USA"
+      }
+    },
+    {
+      "id": "london",
+      "type": "Location",
+      "labels": [
+        "City",
+        "HQ"
+      ],
+      "properties": {
+        "name": "London",
+        "country": "UK"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "from": "satya_nadella",
+      "to": "microsoft",
+      "type": "CEO_OF",
+      "properties": {
+        "since": 2014
+      }
+    },
+    {
+      "from": "sundar_pichai",
+      "to": "google",
+      "type": "CEO_OF",
+      "properties": {
+        "since": 2015
+      }
+    },
+    {
+      "from": "sam_altman",
+      "to": "openai",
+      "type": "CEO_OF",
+      "properties": {
+        "since": 2019
+      }
+    },
+    {
+      "from": "jensen_huang",
+      "to": "nvidia",
+      "type": "CEO_OF",
+      "properties": {
+        "since": 1993
+      }
+    },
+    {
+      "from": "demis_hassabis",
+      "to": "deepmind",
+      "type": "CEO_OF",
+      "properties": {
+        "since": 2010
+      }
+    },
+    {
+      "from": "ilya_sutskever",
+      "to": "ssi",
+      "type": "CEO_OF",
+      "properties": {
+        "since": 2024
+      }
+    },
+    {
+      "from": "jensen_huang",
+      "to": "nvidia",
+      "type": "FOUNDED",
+      "properties": {
+        "year": 1993
+      }
+    },
+    {
+      "from": "demis_hassabis",
+      "to": "deepmind",
+      "type": "FOUNDED",
+      "properties": {
+        "year": 2010
+      }
+    },
+    {
+      "from": "ilya_sutskever",
+      "to": "ssi",
+      "type": "FOUNDED",
+      "properties": {
+        "year": 2024
+      }
+    },
+    {
+      "from": "satya_nadella",
+      "to": "microsoft",
+      "type": "WORKS_AT",
+      "properties": {
+        "since": 1992
+      }
+    },
+    {
+      "from": "sundar_pichai",
+      "to": "google",
+      "type": "WORKS_AT",
+      "properties": {
+        "since": 2004
+      }
+    },
+    {
+      "from": "ilya_sutskever",
+      "to": "openai",
+      "type": "PREVIOUSLY_AT",
+      "properties": {
+        "from": 2015,
+        "until": 2024,
+        "role": "Chief Scientist"
+      }
+    },
+    {
+      "from": "microsoft",
+      "to": "redmond",
+      "type": "HEADQUARTERED_IN",
+      "properties": {}
+    },
+    {
+      "from": "google",
+      "to": "mountain_view",
+      "type": "HEADQUARTERED_IN",
+      "properties": {}
+    },
+    {
+      "from": "openai",
+      "to": "san_francisco",
+      "type": "HEADQUARTERED_IN",
+      "properties": {}
+    },
+    {
+      "from": "nvidia",
+      "to": "santa_clara",
+      "type": "HEADQUARTERED_IN",
+      "properties": {}
+    },
+    {
+      "from": "deepmind",
+      "to": "london",
+      "type": "HEADQUARTERED_IN",
+      "properties": {}
+    },
+    {
+      "from": "openai",
+      "to": "gpt4",
+      "type": "CREATED",
+      "properties": {
+        "year": 2023
+      }
+    },
+    {
+      "from": "google",
+      "to": "gemini",
+      "type": "CREATED",
+      "properties": {
+        "year": 2023
+      }
+    },
+    {
+      "from": "microsoft",
+      "to": "copilot",
+      "type": "CREATED",
+      "properties": {
+        "year": 2021
+      }
+    },
+    {
+      "from": "nvidia",
+      "to": "cuda",
+      "type": "CREATED",
+      "properties": {
+        "year": 2007
+      }
+    },
+    {
+      "from": "deepmind",
+      "to": "alphafold",
+      "type": "CREATED",
+      "properties": {
+        "year": 2020
+      }
+    },
+    {
+      "from": "microsoft",
+      "to": "azure",
+      "type": "CREATED",
+      "properties": {
+        "year": 2010
+      }
+    },
+    {
+      "from": "gpt4",
+      "to": "transformer",
+      "type": "USES_TECH",
+      "properties": {}
+    },
+    {
+      "from": "gpt4",
+      "to": "rlhf",
+      "type": "USES_TECH",
+      "properties": {}
+    },
+    {
+      "from": "gemini",
+      "to": "transformer",
+      "type": "USES_TECH",
+      "properties": {}
+    },
+    {
+      "from": "copilot",
+      "to": "gpt4",
+      "type": "POWERED_BY",
+      "properties": {}
+    },
+    {
+      "from": "alphafold",
+      "to": "transformer",
+      "type": "USES_TECH",
+      "properties": {}
+    },
+    {
+      "from": "microsoft",
+      "to": "openai",
+      "type": "INVESTED_IN",
+      "properties": {
+        "amount": "$13B",
+        "year": 2023
+      }
+    },
+    {
+      "from": "google",
+      "to": "deepmind",
+      "type": "ACQUIRED",
+      "properties": {
+        "amount": "$500M",
+        "year": 2014
+      }
+    },
+    {
+      "from": "transformer",
+      "to": "rag",
+      "type": "ENABLES",
+      "properties": {}
+    },
+    {
+      "from": "rag",
+      "to": "context_eng",
+      "type": "PART_OF",
+      "properties": {}
+    }
+  ],
+  "lastUpdated": "2026-04-28T06:16:44.406Z"
+}
