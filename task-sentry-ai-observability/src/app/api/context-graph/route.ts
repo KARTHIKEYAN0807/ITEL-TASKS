@@ -619,11 +619,16 @@ export async function POST(request: Request) {
               role: "system",
               content: `Retrieved Context from Knowledge Graph:\n\n${retrievedFacts.join("\n\n")}`,
             },
-            // Short-term memory: previous conversation turns
-            ...conversationHistory.map((msg) => ({
-              role: msg.role as "user" | "assistant",
-              content: msg.content,
-            })),
+            // Short-term memory: build a numbered conversation summary
+            // so the model can clearly track message order
+            ...(conversationHistory.length > 0
+              ? [
+                  {
+                    role: "system" as const,
+                    content: `Conversation History (${conversationHistory.length} messages, numbered in order):\n${conversationHistory.map((msg, i) => `[${i + 1}] ${msg.role.toUpperCase()}: ${msg.content.slice(0, 300)}`).join("\n")}\n\nThe MOST RECENT user question was message #${conversationHistory.filter(m => m.role === "user").length} from the user.`,
+                  },
+                ]
+              : []),
             // Current question
             { role: "user", content: userQuestion },
           ];
